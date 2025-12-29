@@ -1,0 +1,32 @@
+==============================================================================================
+Boundary Condition-based Machine Learning Algorithm for Fast Prediction of Supersonic Flows
+==============================================================================================
+
+Rachakonda Naga Sai Prakash (రాచకొండ నాగ సాయి ప్రకాష్), Tapan K. Mankodi(तपन के. मंकोड़ी), Niranjan Sahoo (ନରଞ୍ଜନ ସାହ)
+Department of Mechanical Engineering, Indian Institute of Technology Guwahati, Guwahati, Assam, 781039, India
+(*Electronic mail: tapan.mankodi@iitg.ac.in)
+(Dated: June 10, 2025)
+
+
+The supplementary material contains
+1) model16GenObjC3012a.keras
+	KERAS API for $S_{16}$ BCML Model 
+	This is the main DNN model that the python codes will use
+2) Case folders:
+	a) 0 						Initial Conditions
+	b) 0.1 						NSF Results for comparison
+	c) constant 				Mesh and other details
+	d) system					solver and domain decomposition
+3) InputFileWith16Generators_Validation.txt
+	Each row contains 9 times 16 = 144 values for a cell
+	Total number of cell (check constant/polyMesh/) is same as the number of lines in this file
+	Columns 9i+1 contains the length of the generator (where i in (0, 1, 2, ... , 8)), not the distance function
+4) Python files
+	a) ML_TrainBCML.py 			for training the BCML model
+	b) ML_LoadBCML.py 			for predicting flow field using model16GenObjC3012a.keras BCML model
+
+
+To run the model
+1) Run $python3 ML_LoadBCML.py
+2) Make a new folder (say 0.2) and copy paste p, T and U files into this folder
+3) Use Paraview for visualization.
