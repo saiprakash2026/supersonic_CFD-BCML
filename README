@@ -26,6 +26,14 @@ The supplementary material contains
 	b) ML_LoadBCML.py 			for predicting flow field using model16GenObjC3012a.keras BCML model
 
 
+p, T, U files should be in "0" Folder
+p1, Ttrans1, U1 should be in "0.1" Folder.
+fvschemes, fvsolution, controlDict and  decomposeParDict  : all 4 files should be in " System Folder"
+
+
+
+
+
 To run the model
 1) Run $python3 ML_LoadBCML.py
 2) Make a new folder (say 0.2) and copy paste p, T and U files into this folder
